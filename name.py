@@ -13,9 +13,9 @@ def download_video():
             video = YouTube(ruta)  
             descarga = video.streams.get_highest_resolution()
             
-            descarga.download(output_path='./video1', filename=f'{num+1}. {descarga.default_filename}')
+            descarga.download(output_path='./video1', filename=f'{12+num+1}. {descarga.default_filename}')
 
-            print(f'\n >>> {num+1}. {ruta}')
+            print(f'\n >>> {12+num+1}. {ruta}')
             iterador += 1
             time.sleep(0.02)
 

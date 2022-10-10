@@ -9,9 +9,6 @@ import os, time
 # curso piano
 # https://www.youtube.com/watch?v=kAALQ4JEY6c&list=PL92TYERZtnkSqZpcT8xlygi_FfpnecThS
 
-#animacio en  proceso
-# https://www.youtube.com/watch?v=m9AEcBI58c4&list=PLnih44BjGnCKFKF8l8nZAn9ClMlQ8afqK
-
 # git
 # https://www.youtube.com/watch?v=4OXXLtbM8IE&list=PLDbrnXa6SAzUyitkL4zcnWO07HxG0BvmS
 
