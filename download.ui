@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>602</width>
+    <height>410</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Alarma</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QFrame#fondo{
+	background: #05182a;
+	border:6px solid #223048;
+	border-radius: 30px;
+}
+
+QPushButton#btn_cerrar{
+	background: #ac0003;
+	border-radius: 10px;
+}
+
+QPushButton#btn_cerrar:hover{
+	background: #ff0008;
+	color: black;
+}
+
+QPushButton#btn_minimizar{
+	background: #666666;
+	border-radius: 10px;
+}
+
+QPushButton#btn_minimizar:hover{
+	background: #a8a8a8;
+}
+
+QLabel#lbl_titulo{
+	font: 30px arial;
+	border: 6px solid #223048;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+	color:rgb(85, 170, 255);
+}
+
+QLabel#lbl_hora{
+	font: 35pt &quot;CentSchbkCyrill BT&quot;;
+	color: #a5b3ff;
+}
+
+QComboBox{
+	font: 20px arial bold; 
+}
+
+QSpinBox{
+		font: 20px arial bold; 
+}
+
+QFrame#fr_dias{
+	font: 30px arial;
+	color: #3b5d9b;
+}
+
+QCheckBox{
+	font: 75 italic 14pt &quot;Sitka Small&quot;;
+	color: #a5b3ff;
+}
+
+QLabel#lbl_subtitulo{
+	font: 75 italic 16pt &quot;Arial&quot;;
+	color: #3b5d9b;
+}
+
+QLineEdit#txte_link{
+	background: #11334c;
+	font: 75 italic 14pt &quot;Arial&quot;;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    padding-left: 10px;
+
+}
+
+QPushButton#btn_buscar{
+	font: 75 italic 14pt &quot;Arial&quot;;
+	border: 3px solid #11334c;
+	background: #2d96ff;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+QPushButton#btn_buscar:hover{
+	background: transparent;
+	color: #2d96ff;
+}
+
+QPushButton#btn_buscar:pressed{
+	padding-left: 10px;
+}
+
+QLabel#lbl_autor{
+	font: 75 italic 14pt &quot;Arial&quot;;
+	border: 6px solid #223048;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 15px;
+	color: #a5b3ff;
+}</string>
+  </property>
+  <widget class="QFrame" name="fondo">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>561</width>
+     <height>381</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QPushButton" name="btn_buscar">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>220</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Descargar</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_autor">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>330</y>
+      <width>221</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Autor: Francisco Velez</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_titulo">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>0</y>
+      <width>421</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Descargar videos de Youtube</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_cerrar">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>20</y>
+      <width>21</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_minimizar">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>21</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txte_link">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>220</y>
+      <width>301</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButton">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>110</y>
+      <width>82</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Descargar video</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButton_2">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>140</y>
+      <width>82</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Descargar lista re reproduccion</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>btn_minimizar</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>showMinimized()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>42</x>
+     <y>43</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-17</x>
+     <y>43</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_cerrar</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>548</x>
+     <y>41</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>610</x>
+     <y>41</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
