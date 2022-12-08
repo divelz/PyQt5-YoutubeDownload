@@ -3,14 +3,11 @@
 #* Version cmd
 import os, time
 # from colorama import Fore
+#https://www.youtube.com/watch?v=iHvWO8fdTHc&list=PLVGvenR13C0gqPLzPkZMQPaSVKm2TU85I
+# https://www.youtube.com/watch?v=FKkDGow6Fpw&list=PL9SnRnlzoyX1-FFtFcUupLSdnTRvs8B5K
 
-# https://www.youtube.com/watch?v=7O-YUh29XIE&ab_channel=Nauu08 descarga gratis
-
-# curso piano
-# https://www.youtube.com/watch?v=kAALQ4JEY6c&list=PL92TYERZtnkSqZpcT8xlygi_FfpnecThS
-
-# git
-# https://www.youtube.com/watch?v=4OXXLtbM8IE&list=PLDbrnXa6SAzUyitkL4zcnWO07HxG0BvmS
+# Corso prfesionar de desarrollo web
+# https://www.youtube.com/watch?v=LAlceG2cY_w&list=PLM-Y_YQmMEqDcV8cJcosRsqJJNrhlpwzb
 
 try:
     from pytube import Playlist, YouTube

@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>602</width>
+    <width>600</width>
     <height>410</height>
    </rect>
   </property>
@@ -39,7 +39,7 @@ QPushButton#btn_minimizar:hover{
 	background: #a8a8a8;
 }
 
-QLabel#lbl_titulo{
+QLabel#lbl_titulo {
 	font: 30px arial;
 	border: 6px solid #223048;
     border-bottom-left-radius: 15px;
@@ -47,41 +47,43 @@ QLabel#lbl_titulo{
 	color:rgb(85, 170, 255);
 }
 
-QLabel#lbl_hora{
-	font: 35pt &quot;CentSchbkCyrill BT&quot;;
-	color: #a5b3ff;
+QFrame#fr_icon1, QFrame#fr_icon2 {
+	border: 3px solid rgb(0, 255, 0);
+	border-radius: 10px;
 }
 
-QComboBox{
-	font: 20px arial bold; 
+QLabel#lbl_textVideo1, QLabel#lbl_textVideo2 {
+	font: italic 14pt &quot;Arial&quot;;
+	color: rgb(170, 255, 255);
 }
 
-QSpinBox{
-		font: 20px arial bold; 
+QRadioButton#rdb_textVideo1, QRadioButton#rdb_textVideo2 {
+	font: italic 14pt &quot;Arial&quot;;
+	color: rgb(170, 255, 255);
+}
+QRadioButton::indicator {
+    border: 3px solid rgb(52, 59, 72);
+	width: 15px;
+	height: 15px;
+	border-radius: 10px;
+    background: rgb(44, 49, 60);
+}
+QRadioButton::indicator:hover {
+    border: 3px solid rgb(58, 66, 81);
+}
+QRadioButton::indicator:checked {
+    background: 3px solid rgb(94, 106, 130);
+	border: 3px solid rgb(52, 59, 72);	
 }
 
-QFrame#fr_dias{
-	font: 30px arial;
-	color: #3b5d9b;
-}
-
-QCheckBox{
-	font: 75 italic 14pt &quot;Sitka Small&quot;;
-	color: #a5b3ff;
-}
-
-QLabel#lbl_subtitulo{
-	font: 75 italic 16pt &quot;Arial&quot;;
-	color: #3b5d9b;
-}
 
 QLineEdit#txte_link{
 	background: #11334c;
+	color: rgb(85, 170, 255);
 	font: 75 italic 14pt &quot;Arial&quot;;
     border-bottom-left-radius: 15px;
     border-top-left-radius: 15px;
     padding-left: 10px;
-
 }
 
 QPushButton#btn_buscar{
@@ -101,6 +103,53 @@ QPushButton#btn_buscar:pressed{
 	padding-left: 10px;
 }
 
+QFrame#fr_progressBar1 {
+	border: 4px solid cyan;
+	border-radius: 15px;
+}
+
+QFrame#fr_progressBar2 {
+	background-color: qlineargradient(spread:pad, x1:0.21, y1:0, x2:1, y2:0.0284091, stop:0 rgba(0, 223, 255, 255), stop:1 rgba(47, 0, 255, 255));
+	border-radius: 15px;
+}
+
+QLabel#lbl_info {
+	font: italic 14pt &quot;Arial&quot;;
+	color: rgb(165, 255, 249);
+}
+
+QComboBox{
+	font: 75 11pt &quot;Arial&quot;;
+	background-color: #11334c;
+	border-radius: 5px;
+	border: 2px solid #223048;
+	padding: 5px;
+	padding-left: 8px;
+	color: rgb(85, 170, 255);
+}
+
+QComboBox:hover{
+	border: 2px solid rgb(64, 71, 88);
+}
+
+QComboBox::drop-down {
+	subcontrol-origin: padding;
+	subcontrol-position: top right;
+	width: 10px; 
+	border-left-width: 3px;
+	border-left-color: #223048;
+	border-left-style: solid;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+ }
+
+QComboBox QAbstractItemView {
+	color: #a5b3ff;
+	background-color: rgb(33, 37, 43);
+	padding: 5px;
+	selection-background-color: rgb(39, 44, 54);
+}
+
 QLabel#lbl_autor{
 	font: 75 italic 14pt &quot;Arial&quot;;
 	border: 6px solid #223048;
@@ -114,8 +163,8 @@ QLabel#lbl_autor{
     <rect>
      <x>20</x>
      <y>10</y>
-     <width>561</width>
-     <height>381</height>
+     <width>560</width>
+     <height>380</height>
     </rect>
    </property>
    <property name="frameShape">
@@ -127,10 +176,10 @@ QLabel#lbl_autor{
    <widget class="QPushButton" name="btn_buscar">
     <property name="geometry">
      <rect>
-      <x>360</x>
-      <y>220</y>
-      <width>131</width>
-      <height>31</height>
+      <x>365</x>
+      <y>180</y>
+      <width>130</width>
+      <height>30</height>
      </rect>
     </property>
     <property name="text">
@@ -158,8 +207,8 @@ QLabel#lbl_autor{
      <rect>
       <x>70</x>
       <y>0</y>
-      <width>421</width>
-      <height>61</height>
+      <width>420</width>
+      <height>60</height>
      </rect>
     </property>
     <property name="text">
@@ -204,40 +253,117 @@ QLabel#lbl_autor{
    <widget class="QLineEdit" name="txte_link">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>220</y>
-      <width>301</width>
-      <height>31</height>
+      <x>65</x>
+      <y>180</y>
+      <width>300</width>
+      <height>30</height>
      </rect>
     </property>
     <property name="text">
      <string/>
     </property>
    </widget>
-   <widget class="QRadioButton" name="radioButton">
+   <widget class="QFrame" name="fr_progressBar1">
     <property name="geometry">
      <rect>
-      <x>180</x>
-      <y>110</y>
-      <width>82</width>
-      <height>17</height>
+      <x>65</x>
+      <y>230</y>
+      <width>430</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QFrame" name="fr_progressBar2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>10</y>
+       <width>30</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbl_info">
+     <property name="geometry">
+      <rect>
+       <x>25</x>
+       <y>10</y>
+       <width>380</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Bienvenido</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QComboBox" name="cbb_lang">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>80</y>
+      <width>85</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>Español</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>English</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QRadioButton" name="rdb_textVideo1">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>90</y>
+      <width>181</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="text">
      <string>Descargar video</string>
     </property>
+    <property name="checked">
+     <bool>false</bool>
+    </property>
    </widget>
-   <widget class="QRadioButton" name="radioButton_2">
+   <widget class="QRadioButton" name="rdb_textVideo2">
     <property name="geometry">
      <rect>
-      <x>170</x>
-      <y>140</y>
-      <width>82</width>
-      <height>17</height>
+      <x>80</x>
+      <y>130</y>
+      <width>311</width>
+      <height>20</height>
      </rect>
     </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
     <property name="text">
-     <string>Descargar lista re reproduccion</string>
+     <string>Descargar lista de reproducción</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
     </property>
    </widget>
   </widget>
