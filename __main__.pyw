@@ -1,6 +1,5 @@
-from downloadA import Ui_Form, QtWidgets, QtCore
+from Ui_download import Ui_Form, QtWidgets, QtCore
 from pytube import Playlist, YouTube
-from subVentana import subVent
 from notifypy import Notify 
 import sys, os, threading
 
@@ -78,6 +77,10 @@ class MainApp(QtWidgets.QMainWindow):
             if not self.ui.rdb_textVideo1.isChecked(): # Lista de reproduccion 
                 t1 = threading.Thread(name='hilo_1', target=self.descargarLista)
                 t1.start()
+                
+                # self.timer_ = QtCore.QTimer()
+                # self.timer_.timeout.connect(self.animation_barra)
+                # self.timer_.start()
 
             else: # un solo video 
                 t2 = threading.Thread(name='hilo_2', target=(lambda: self.descargarVideo(True)) )
@@ -163,21 +166,6 @@ class MainApp(QtWidgets.QMainWindow):
 
         with open(archivo, 'w') as f: f.write(info)
     
-    def ventana2(self, text='Hola Mundo!', function_=False):
-        geo = self.geometry()
-        self.Form2 = QtWidgets.QMainWindow()
-
-        self.ui2 = subVent()
-        self.ui2.setupUi(
-            self.Form2, [geo.x(), geo.y(), geo.width(),  geo.height()], 
-            text
-        )
-
-        if function_ != False: self.ui2.btn_continuar.clicked.connect(function_)
-        else: self.ui2.btn_continuar.clicked.connect(self.Form2.close)
-        
-        self.Form2.show()
-
     def notificacion(self, title='Titulo', message='Hola Mundo!', application_name='App1'):
         if self.notify:
             notification = Notify()

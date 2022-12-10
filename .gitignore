@@ -1,1 +1,6 @@
 videos/*
+
+__pycache__/
+
+
+.gitignore
