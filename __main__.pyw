@@ -13,6 +13,7 @@ class MainApp(QtWidgets.QMainWindow):
         self.progress = False
         self.notify = True
         self.bar_ = True
+        self.name = ''
 
         self.ui = Ui_Form()
         self.ui.setupUi(self)
@@ -74,13 +75,10 @@ class MainApp(QtWidgets.QMainWindow):
         try:
             self.runAnimationBarra()
 
-            if not self.ui.rdb_textVideo1.isChecked(): # Lista de reproduccion 
-                t1 = threading.Thread(name='hilo_1', target=self.descargarLista)
+            if not self.ui.rdb_textVideo1.isChecked(): # Lista de reproduccion
+                self.ui.lbl_info.setText('Download Url...') 
+                t1 = threading.Thread(name='hilo_1', target=(lambda: self.descargarLista()))
                 t1.start()
-                
-                # self.timer_ = QtCore.QTimer()
-                # self.timer_.timeout.connect(self.animation_barra)
-                # self.timer_.start()
 
             else: # un solo video 
                 t2 = threading.Thread(name='hilo_2', target=(lambda: self.descargarVideo(True)) )
@@ -89,7 +87,6 @@ class MainApp(QtWidgets.QMainWindow):
         except: self.notificacion('Error', 'Error al descargar la informacion.', self.NameApp)
 
     def descargarLista(self):
-        self.ui.lbl_info.setText('<p style="color: rgb(165, 255, 249);">Descargando Urls...</p>')
         self.ui.lbl_info.setText( self.get_Url(self.ui.txte_link.text()) )
 
         self.downloadVideos()
@@ -102,7 +99,7 @@ class MainApp(QtWidgets.QMainWindow):
         self.download_video( url=self.ui.txte_link.text() )
         self.ui.lbl_info.setText(self.name)
         
-        self.notificacion('Informacion', f'Video Listo: {self.name}', self.NameApp)
+        if self.notify: self.notificacion('Informacion', f'Video Listo: {self.name}', self.NameApp)
 
         if timerActive: 
             self.progress = True
@@ -126,7 +123,7 @@ class MainApp(QtWidgets.QMainWindow):
                 f.write(f'{url}\n')
                 self.numVideo += 1
 
-        return f"\n [+] Urls saved {os.getcwd()}/{archivo}"
+        return "Urls saved..."
 
     def download_video(self, url='', cont=False, rutaGuardar='./videos'):        
         self.video = YouTube(url)  
@@ -147,7 +144,7 @@ class MainApp(QtWidgets.QMainWindow):
         for num, ruta in enumerate(self.lines):
             try:
                 self.download_video(ruta, num+1)
-                print(f'\n >>> {num+1}. {ruta}')
+                self.ui.lbl_info.setText(self.name)
                 self.iterador += 1
 
             except:
