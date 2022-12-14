@@ -22,6 +22,6 @@ pip install -r requirements.txt
 * **Language**: to change the language, click where it says Spanish or, in this case, English.
 * **Extra function**: double click on the window and drag to move the window.
 
-<i>Best respect !!! </i>
+<i>Best regard !!!</i>
 
 **<cite>Author: Francisco Velez</cite>**
