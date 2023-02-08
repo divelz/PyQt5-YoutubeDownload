@@ -5,7 +5,7 @@ Project #2 with Python-PyQt5. Download videos from youtube.
 ## To use the code
 
 >>> It can be a bit slow depending on the computer.
-    
+
 1. Install requirements.txt to install the libraries with the version of each one used.
 
 ```
