@@ -5,7 +5,7 @@ class Ui_Form(object):
     def __init__(self): self.inicio = True
 
     def __style__(self):
-        with open('./styles/style.css', 'r') as f: txt = f.read()
+        with open('./style.css', 'r') as f: txt = f.read()
         return txt
         
     def setupUi(self, Form):
