@@ -1,6 +1,6 @@
 # App to download Youtube Videos
 
-Project #2 with Python-PyQt5. Download videos from youtube.
+Project #1 with Python-PyQt5. Download videos from youtube.
 
 ## To use the code
 
